@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 다음path를 앞으로 home이라는 이름으로 부름
     path('', views.home, name = "home"),
+
+    path('introduce/', views.introduce, name = "introduce"),
 ]
