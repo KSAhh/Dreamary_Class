@@ -32,6 +32,24 @@ def create(request):
 
         return redirect('detail', post.id)
 
+def update(request, designer_id):
+    post = get_object_or_404(Designer, pk = designer_id)
+
+    if request.method == 'POST':
+        if 'image' in request.FILES:
+            post.image = request.FILES['image']
+        post.name = request.POST['name']
+        post.address = request.POST['address']
+        post.description = request.POST['description']
+
+        post.save()
+        
+        # path id == detail 기억
+        return redirect('detail', post.id)
+    else:
+        # 객체 확인 위해 post 사용
+        return render(request, 'update.html', {'designer' : post})
+
 def delete(request, designer_id):
     post = get_object_or_404(Designer, pk = designer_id)
     post.delete()
