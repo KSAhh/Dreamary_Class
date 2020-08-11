@@ -1,7 +1,7 @@
 {% load static %}
 
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
@@ -74,13 +74,18 @@
                 <img src="{% static 'images/dreamary_logo.png' %}" width="35" height="35" alt="dreamary_logo.png">
                 <label class="navbar-brand align-self-center">Dreamary</label>
             </a>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{% url 'new' %}">디자이너 등록하기</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main role="main">
         {% block content %}
-        
+
         {% endblock%}
     </main>
 
@@ -91,7 +96,7 @@
             </p>
             <p>Develop Dreamary with Django & Bootstrap</p>
             <p>Likelion 8th</p>
-            
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
