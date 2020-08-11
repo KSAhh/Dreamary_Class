@@ -6,16 +6,3 @@ label{
     margin-bottom: 0rem;
     font-size: 25px;
 }
-
-#logo{
-    display: flex;
-}
-
-#navbar{
-    display: flex;
-    justify-content: space-between;
-}
-
-fotter{
-    padding-top: 1.5rem;
-}
